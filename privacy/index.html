@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#f8f2e7" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#170e09" media="(prefers-color-scheme: dark)">
+<title>Privacy policy — Cassetteur</title>
+<meta name="description" content="What Cassetteur keeps on your device, the four services it asks for album details, and how to turn those lookups off.">
+<link rel="canonical" href="https://cassetteur.com/privacy/">
+<link rel="icon" href="/favicon.ico" sizes="32x32">
+<link rel="icon" href="/favicon.png" type="image/png" sizes="64x64">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="stylesheet" href="/style.css">
+</head>
+<body class="doc-page">
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="/"><img src="/icon.webp" width="32" height="32" alt="">Cassetteur</a>
+    <nav class="site-nav" aria-label="Site">
+      <a href="/privacy/" aria-current="page">Privacy</a>
+      <a href="/support/">Support</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main" class="doc">
+  <h1>Privacy policy</h1>
+  <p class="meta">Effective November 3, 2026</p>
+
+  <div class="panel">
+    <p><strong>The short version.</strong> Cassetteur plays music files you own. It has no account, no ads, no analytics and no tracking. We run no server, and the app sends us nothing. To fill in album details and covers it asks four public music services, sending album and artist names and acoustic fingerprints. It never sends your music, and nothing about who you are beyond the internet address every connection carries. You can turn that off.</p>
+  </div>
+
+  <p>This policy covers the Cassetteur app for iPhone and for Mac, which work the same way.</p>
+
+  <h2 id="on-device">What stays on your device</h2>
+  <ul>
+    <li><strong>Your music.</strong> Cassetteur reads your audio files to play them. It never uploads them.</li>
+    <li><strong>What it remembers about your library</strong>: your tags, hidden albums, the tracks you have turned off, your play history and your view settings. These live in a hidden <code>.cassetteur</code> folder inside your music library, so they travel with your drive and with any copy you make of it. Covers it finds are saved as <code>cover.jpg</code> in the album’s folder.</li>
+    <li><strong>The app’s own settings</strong>: where your library is, your keyboard shortcuts, your game controller and headset button settings, your colour and a few display choices, kept in the app’s storage on your device.</li>
+    <li><strong>A diagnostic log</strong> the app writes on your device to help with crashes (on a Mac, in your home folder). The app never sends it.</li>
+  </ul>
+
+  <h2 id="lookups">What the app looks up online</h2>
+  <p>To fill in album names, years and covers, Cassetteur asks these services about the albums in your library. Each one gets only what the question needs:</p>
+  <div class="service">
+    <b><a href="https://musicbrainz.org">MusicBrainz</a> (MetaBrainz Foundation)</b>
+    An album’s artist and title, an artist’s name, or a MusicBrainz identifier for a recording or release.
+  </div>
+  <div class="service">
+    <b><a href="https://acoustid.org">AcoustID</a></b>
+    For a track whose tags are missing, and for the first track of an album you import: an acoustic fingerprint and the track’s length in seconds. The fingerprint is a short numeric summary that your device computes from up to the first two minutes of the track. The audio itself is never sent.
+  </div>
+  <div class="service">
+    <b><a href="https://coverartarchive.org">Cover Art Archive</a></b>
+    A MusicBrainz release identifier, to fetch that album’s cover. The image is served by the Internet Archive (archive.org), which receives the same request.
+  </div>
+  <div class="service">
+    <b>Apple’s iTunes Search API</b>
+    For an album with no year that MusicBrainz could not find: the album’s artist and title, and your device’s region setting (for example <code>US</code>). If Apple offers matches, the app fetches their track lists and compares them with yours on your device. Your own track list is never sent. This happens at most once every 30 days for each album.
+  </div>
+  <p>Lookups run when the app starts (for albums it has not looked up yet, or could not finish), when you import music, when you tap <strong>Check all albums now</strong> in Settings, and when new albums appear in your library. Albums and artists it could not match may be asked about again at a later start.</p>
+  <p><strong>What the services can see.</strong> Like any website you visit, each service sees your device’s internet (IP) address. Every request also names the app, its version and this website. The app sends no name, email address, account, device identifier or location, and nothing about what you listen to. MusicBrainz says it logs every request it receives, including the IP address and what was asked (<a href="https://metabrainz.org/privacy">MetaBrainz privacy policy</a>). Apple handles its requests under <a href="https://www.apple.com/legal/privacy/">Apple’s privacy policy</a>. These are independent services that we do not run. We have no arrangement with them, and the app shares nothing with them beyond what is listed here.</p>
+
+  <h2 id="turn-off">Turning lookups off</h2>
+  <p>In Settings, under <strong>Album details</strong>, turn off <strong>Look up album details online</strong>. The switch belongs to the library: it is saved in the library’s <code>.cassetteur</code> folder, so it applies on every iPhone or Mac that opens that library. A new library starts with it on.</p>
+  <p>When it is off, nothing leaves your device for that library. Cassetteur asks no service when it starts, after an import or when new albums appear, <strong>Check all albums now</strong> is unavailable, and an import copies your music without asking anyone. Your albums keep the names, years and covers already in their files and folders. If the app cannot read the switch, for example while the drive is being reconnected, it treats lookups as off.</p>
+
+  <h2 id="system">Siri and the rest of your iPhone</h2>
+  <ul>
+    <li><strong>Siri.</strong> So that Siri can recognise them when you ask, Cassetteur gives Siri on your iPhone the names of your artists and tags. Siri is Apple’s service and works under Apple’s privacy policy.</li>
+    <li><strong>Now Playing.</strong> Like any music app, Cassetteur shows the current track’s title, artist, album and cover on the lock screen and in Control Center.</li>
+    <li><strong>Crash reports.</strong> If you have chosen to share analytics with app developers in your device’s settings, Apple may pass us its crash reports for Cassetteur. That choice is yours, and it is made in your device’s settings, not in the app.</li>
+  </ul>
+  <p>Cassetteur asks for no other access. It does not use your location, contacts, photos, camera, microphone or Bluetooth; a keyboard or game controller you have connected to your device needs no permission. It reads only the music folder you choose and the files you pick: music to import, or an image for a cover.</p>
+
+  <h2 id="deleting">Keeping and deleting</h2>
+  <p>We keep nothing about you, because the app sends us nothing. To remove what the app keeps on your iPhone, delete the app: that removes its settings and its log. On a Mac, the log is <code>cassetteur-debug.log</code> in your home folder. The <code>.cassetteur</code> folder in your library is yours: delete it to remove everything Cassetteur remembered about that library, including tags, hidden albums and play history. Your music files are never changed by deleting it. What you sent to the lookup services is up to them. See their policies above.</p>
+
+  <h2 id="children">Children</h2>
+  <p>Cassetteur collects no personal data from anyone, children included.</p>
+
+  <h2 id="changes">Changes</h2>
+  <p>If the app starts handling data differently, this page will change first, and the date at the top will move.</p>
+
+  <h2 id="contact">Contact</h2>
+  <p>Questions about privacy: <a href="mailto:spencer@cassetteur.com">spencer@cassetteur.com</a></p>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <a href="/privacy/">Privacy</a>
+    <a href="/support/">Support</a>
+    <a href="mailto:spencer@cassetteur.com">spencer@cassetteur.com</a>
+    <p class="copyright">© 2026 Cassetteur</p>
+  </div>
+</footer>
+</body>
+</html>
